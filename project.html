@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+    <title>Social boat</title>
+</head>
+
+<body>
+    <form action="javascript:void(0);" name='myForm' method="post" id="form">
+        <h2>Javascript Onsubmit Event Example</h2>
+        <label>UID :</label>
+        <input id="uid" name="uid" placeholder="uid" type="text">
+        <label>Name :</label>
+        <input id="name" name="name" placeholder="Name" type="text">
+        <label>Age :</label>
+        <input id="age" name="age" placeholder="Age" type="text">
+        <label>Bio :</label>
+        <input id="Bio" name="Bio" placeholder="Bio in one line" type="text">
+        <label>Linkedin Profile :</label>
+        <input id="Linkedin" name="Linkedin" placeholder="Linkedin" type="text">
+        <label>fb :</label>
+        <input id="fb" name="fb" placeholder="Facebook" type="text">
+        <label>Instagram :</label>
+        <input id="Instagram" name="Instagram" placeholder="Instagram" type="text">
+        <label for="file">File to upload</label>
+        <input type="file" id="imagefile" accept="image/png , image/jpg">
+        <br>
+        <input type="button" value='Submit' onclick="createProfile()">
+    </form>
+    <label for="site-search">Search the site:</label>
+    <input type="search" id="site-search" name="q" value='' aria-label="Search through site content" onchange="debounce(fetchVideos,400)(this.value)">
+    <ul id='videoList'></ul>
+    <ul id='userDetails'></ul>
+
+</body>
+<script src="project.js"></script>
+
+</html>
