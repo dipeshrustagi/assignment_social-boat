@@ -77,4 +77,4 @@ const fetchVideos = (query) => {
       //TODO : Please remove this code 
     })
 }
-fetchVideos('fit');
+fetchVideos(document.getElementById('site-search').value);
