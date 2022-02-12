@@ -26,10 +26,11 @@ const createProfile = () => {
   const linkedin = document.getElementById('Linkedin').value;
   const facebook = document.getElementById('fb').value;
   const instagram = document.getElementById('Instagram').value;
+  const img=document.getElementById('imagefile').value;
   fetch('https://asia-south1-socialboat-dev.cloudfunctions.net/assignmentPost',{
     method:"POST",
     body:JSON.stringify({
-      name,age,bio,uid,linkedin,facebook,instagram
+      name,age,bio,uid,linkedin,facebook,instagram,img
     })
   }).then(() => {
     alert('form successfully submited');
