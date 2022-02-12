@@ -52,18 +52,6 @@ const getUserDetails = (userId) => {
     })
     .catch(() => {
       alert("oops getuserDetails api failed");
-      // TODO : Remove this code before submitting
-      currentUser = {
-        "uid": "1",
-        "name": "Tanu Grover",
-        "fb": "jiuiuhc",
-        "img": "https://images.unsplash.com/photo-1643649763798-65b604349991?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-        "instagram": "dfgfggjuiu",
-        "bio": "Education is the best friend. An educated person is respected everywhere. Education beats the beauty and the youth."
-      };
-      console.log(currentUser);
-      document.getElementById('userDetails').innerHTML = `<li><img src=${currentUser.img}/></li><li>Name : ${currentUser.name}</li><li>${currentUser.bio}</li`;
-
     })
 }
 
@@ -86,70 +74,6 @@ const fetchVideos = (query) => {
     .catch(() => {
       alert("OOPS, Something went wrong !!!!");
       //TODO : Please remove this code 
-
-      resp = {
-        "status": "success",
-        "results": [
-          {
-            "heading": "fit:r2ISFB",
-            "text": "desc:unYS3o2NyhI1uY39CgF6I8HjLsTCHeOqphOXQ5sWd2G3bSSSACeDKTN51ucKeClmd6WQuIMpmM43mtI07I554uVNBx3djX46wyLwXqVuWkN5kxNhV0iwYHNk",
-            "video": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-            "tags": [
-              "Cardio",
-              "Running",
-              "Cardio"
-            ]
-          },
-          {
-            "heading": "fit:i5hg2p",
-            "text": "desc:1cE5aKvbwKyzS8HE6m3rKmAWfGEwM34Sicdzkx6cpPdPDp6PvmsbOHE0NnyJ5zfiiOlaI3Zi8zXbvfwIWmMNsg3eTW24JRHC7wqlYQQpkgF2GUHqRMgLj9Rq",
-            "video": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-            "tags": [
-              "Cycling",
-              "HRX",
-              "Tabata"
-            ]
-          },
-          {
-            "heading": "fit:ury8gy",
-            "text": "desc:jx4KlIFmkM3h2AUXUEYQkbM7fItfJkeDbm2xd7tcN0w7UafjnswVMndKm9Mm1YJeyQ3s5A21rTkGjDIsvmRa2rLqsMb5N6DZltab8vxwH7ZA0SrqBtGAdeIz",
-            "video": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-            "tags": [
-              "HRX",
-              "Strength training",
-              "HIIT"
-            ]
-          },
-          {
-            "heading": "fit:GsTRg4",
-            "text": "desc:7XqK5MIpQJBVBq9Us2sklaTjQ1XdemltflhbOPFz21h9BCvQpyP8wmbUgELujEhpcja3bTugrFUACuXBJILcivTsoooNYcKeJRXRj8td8jEIQ1HPzku0ZxxO",
-            "video": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-            "tags": [
-              "HIIT",
-              "Cycling",
-              "Strength training"
-            ]
-          },
-          {
-            "heading": "fit:OySOC6",
-            "text": "desc:k2ooEWjEMThmnv1ceQcUxXzwydjlVG8BPVrm5z3JJs2KwCvDLt2qDIQOqFbw1cI8KhkgoOPCEmMca69XY57OTYUnECINfnZ1jWnRyl1LREuBGk3EsWX35d2u",
-            "video": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-            "tags": [
-              "Running",
-              "Tabata",
-              "Cycling"
-            ]
-          }
-        ]
-      }
-      videoList.data = resp;
-      videoList.loading = false;
-      let jsString = '';
-      for (let i = 0; i < resp.results.length; i++) {
-        jsString += `<li><div class="videocss"><video width="400" controls><source src=${resp.results[i].video} type="video/mp4">Your browser does not support HTML video</video></div><div class="textvideo">${resp.results[i].text}</div></li>`;
-      }
-      document.getElementById('videoList').innerHTML = jsString;
     })
-
 }
 fetchVideos('fit');
